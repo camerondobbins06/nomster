@@ -1,4 +1,9 @@
 <% @places.each do |place| %>
+<br class="clear" />
+<div class="text-center">	
+<%= will_paginate @places %>
+	</div>
+	<br class="clear"/>
 	<div class="booyah-box col-xs-10 col-xs-offest-1">
 		<h1><%= place.name %></h1>
 		<i><%= place.address %></i><br /><br />
