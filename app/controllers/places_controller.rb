@@ -16,6 +16,7 @@ class PlacesController < ApplicationController
 			redirect_to root_path
 		else
 			render :new, status: :unprocessable_entity
+		end
 	end
 end
 
@@ -34,6 +35,7 @@ end
 
 	def update
 		@place = Place.find(params[:id])
+		
 		if @place.user != current_user
 			return render text: 'Not Alowed', status: :forbidden
 		end
