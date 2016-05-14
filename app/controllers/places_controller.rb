@@ -17,6 +17,7 @@ class PlacesController < ApplicationController
 		else
 			render :new, status: :unprocessable_entity
 	end
+end
 
 
 	def show
@@ -42,6 +43,7 @@ class PlacesController < ApplicationController
 			redirect_to root_path
 		else
 			render :edit, status: :unprocessable_entity
+		end
 	end
 
 	def destroy
@@ -61,10 +63,9 @@ class PlacesController < ApplicationController
 		params.require(:place).permit(:name, :description, :address)
 	end
 
+	
+
+
+
 
 end
-
-
-
-
-
