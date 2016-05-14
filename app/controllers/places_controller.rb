@@ -18,11 +18,12 @@ class PlacesController < ApplicationController
 			render :new, status: :unprocessable_entity
 		end
 	end
-end
+
 
 
 	def show
 		@place = Place.find(params[:id])
+		@comment = Comment.new
 	end
 
 	def edit
@@ -53,7 +54,6 @@ end
 		if @place.user != current_user
 			return render text: 'Not Allowed', status: :forbidden
 		end
-
 		@place.destroy
 		redirect_to root_path
 	end
@@ -64,10 +64,4 @@ end
 	def place_params
 		params.require(:place).permit(:name, :description, :address)
 	end
-
-	
-
-
-
-
 end
