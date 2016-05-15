@@ -56,13 +56,16 @@
 
 <div class="clear"></div>
  
-
-
+<div class="col-xs-10 col-xs-offest-1"> 
+  <h1 class="pull-left">Comment</h1>
 <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Add A Comment
-</button>
+  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Add A Comment
+  </button>
+</div>
 
+
+<div class="clear"></div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -86,10 +89,11 @@
 </div>
 
 
-<h1>Comments</h1>
+
+<h1 class ="pull-right">Comments</h1>
 
 <% @place.comments.each do |comment| %>
-  <div>
+  <div class="col-xs-12 col-6">
     <blockquote>
       <b><%= comment.rating %></b> -
         <%= comment.message %>
@@ -97,4 +101,3 @@
     </blockquote>
   </div>
 <% end %>
-
