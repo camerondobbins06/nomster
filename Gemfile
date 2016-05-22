@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
@@ -41,6 +43,11 @@ gem 'simple_form'
 gem 'devise', '>= 3.2.4'
 gem "geocoder"
 gem "figaro", ">= 1.0.0"
+
+gem 'carrierwave'
+
+gem "fog", "~> 1.3.1"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
